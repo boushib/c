@@ -10,7 +10,7 @@ struct User {
 };
 
 void getUserInfo(char username[], char email[], int age) {
-  printf("username: %s\nemail %s\nage: %d\n", username, email, age);
+  printf("username: %s\nemail %s\nage: %d\n\n", username, email, age);
 }
 
 int main() {
@@ -19,16 +19,12 @@ int main() {
   strcpy(admin.email, "admin@boushib.com");
   strcpy(admin.gender, "male");
   admin.age = 29;
+
   getUserInfo(admin.username, admin.email, admin.age);
-  char test[] = "Hello";
-  int num = 20;
+
+  int num = 200;
   int *pNum = &num;
-  printf("num var pointer: %d", pNum);
-  //printf("test var address: %p", &test);
-  /*
-  for ( int i = 0; i < 10; i++ ) {
-    printf("%d\n", i + 1);
-  }
-  */
+  printf("num pointer: %p\n", pNum);
+  printf("num value: %d\n", *pNum);
   return 0;
 }
