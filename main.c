@@ -13,6 +13,12 @@ void getUserInfo(char username[], char email[], int age) {
   printf("username: %s\nemail %s\nage: %d\n\n", username, email, age);
 }
 
+void createUsersFile(char fileName[]){
+  FILE *filePointer = fopen(fileName, "w");
+  fprintf(filePointer, "Hey! testing!");
+  fclose(filePointer);
+}
+
 int main() {
   struct User admin;
   strcpy(admin.username, "boushib");
@@ -20,11 +26,14 @@ int main() {
   strcpy(admin.gender, "male");
   admin.age = 29;
 
+  createUsersFile("./users.txt");
+
   getUserInfo(admin.username, admin.email, admin.age);
 
   int num = 200;
   int *pNum = &num;
   printf("num pointer: %p\n", pNum);
   printf("num value: %d\n", *pNum);
+
   return 0;
 }
