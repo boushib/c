@@ -20,9 +20,12 @@ int main() {
   strcpy(admin.gender, "male");
   admin.age = 29;
   getUserInfo(admin.username, admin.email, admin.age);
-
+  char test[] = "Hello";
+  printf("test var address: %p", &test);
+  /*
   for ( int i = 0; i < 10; i++ ) {
     printf("%d\n", i + 1);
   }
+  */
   return 0;
 }
