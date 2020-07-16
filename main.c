@@ -21,7 +21,10 @@ int main() {
   admin.age = 29;
   getUserInfo(admin.username, admin.email, admin.age);
   char test[] = "Hello";
-  printf("test var address: %p", &test);
+  int num = 20;
+  int *pNum = &num;
+  printf("num var pointer: %d", pNum);
+  //printf("test var address: %p", &test);
   /*
   for ( int i = 0; i < 10; i++ ) {
     printf("%d\n", i + 1);
