@@ -15,7 +15,17 @@ void getUserInfo(char username[], char email[], int age) {
 
 void createUsersFile(char fileName[]){
   FILE *filePointer = fopen(fileName, "w");
-  fprintf(filePointer, "Hey! testing!");
+  fprintf(filePointer, "Hey!\nTesting!");
+  fclose(filePointer);
+}
+
+void readUsersFile(char fileName[]) {
+  char line[255];
+  FILE *filePointer = fopen(fileName, "r");
+  fgets(line, 255, filePointer);
+  printf("%s", line);
+  fgets(line, 255, filePointer);
+  printf("%s\n\n", line);
   fclose(filePointer);
 }
 
@@ -26,7 +36,8 @@ int main() {
   strcpy(admin.gender, "male");
   admin.age = 29;
 
-  createUsersFile("./users.txt");
+  //createUsersFile("./users.txt");
+  readUsersFile("./users.txt");
 
   getUserInfo(admin.username, admin.email, admin.age);
 
