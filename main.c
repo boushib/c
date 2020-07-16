@@ -20,5 +20,9 @@ int main() {
   strcpy(admin.gender, "male");
   admin.age = 29;
   getUserInfo(admin.username, admin.email, admin.age);
+
+  for ( int i = 0; i < 10; i++ ) {
+    printf("%d\n", i + 1);
+  }
   return 0;
 }
